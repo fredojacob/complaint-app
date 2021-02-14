@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Complaint;
 use Illuminate\Http\Request;
+use App\Task;
+use Auth;
 
 class ComplaintController extends Controller
 {
@@ -35,7 +37,18 @@ class ComplaintController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+       
+        $complaint = new Complaint;
+
+        $complaint->name = $request->name;
+        $complaint->mail = $request->mail;
+        $complaint->complaint = $request->complait;
+        $complaint->save();
+
+        return 'correcto';
+
+        
     }
 
     /**
