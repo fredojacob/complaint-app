@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateComplaintsTable extends Migration
+class CreateOpinionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateComplaintsTable extends Migration
      */
     public function up()
     {
-        Schema::create('complaints', function (Blueprint $table) {
+        Schema::create('opinions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('mail');
@@ -29,6 +29,6 @@ class CreateComplaintsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('complaints');
+        Schema::dropIfExists('opinions');
     }
 }
