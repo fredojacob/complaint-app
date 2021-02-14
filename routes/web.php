@@ -18,6 +18,9 @@ use App\Http\Controller\ComplaintController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/opinion', function () {
+    return view('opinion.index');
+});
 
 Auth::routes();
 

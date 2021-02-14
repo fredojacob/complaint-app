@@ -16,7 +16,7 @@ class OpinionController extends Controller
      */
     public function index()
     {
-        $opinions = Opinion::paginate(2);
+        $opinions = Opinion::paginate(5);
         return view('opinion.index', compact('opinions'));
 
     }
