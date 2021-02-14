@@ -16,7 +16,9 @@ class OpinionController extends Controller
      */
     public function index()
     {
-        //
+        $opinions = Opinion::paginate(2);
+        return view('opinion.index', compact('opinions'));
+
     }
 
     /**
@@ -45,7 +47,7 @@ class OpinionController extends Controller
         $opinion->complaint = $request->complaint;
         $opinion->save();
 
-        return 'correcto';
+        return 'guardado correctamente';
     }
 
     /**

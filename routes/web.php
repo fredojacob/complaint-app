@@ -29,7 +29,7 @@ Route::post('/complaint/store', [App\Http\Controllers\ComplaintController::class
 Route::get('/complaint/{complaint}', [App\Http\Controllers\ComplaintController::class, 'show'])->name('complaint.show');
 
 
-Route::get('/opinion', [App\Http\Controllers\OpinionController::class, 'index'])->name('welcome');
+Route::get('/opinion', [App\Http\Controllers\OpinionController::class, 'index'])->name('opinion.index');
 Route::get('/opinion/create', [App\Http\Controllers\OpinionController::class, 'create'])->name('opinion.create');
 Route::post('/opinion/store', [App\Http\Controllers\OpinionController::class, 'store'])->name('opinion.store');
 Route::get('/opinion/{opinion}', [App\Http\Controllers\OpinionController::class, 'show'])->name('opinion.show');
