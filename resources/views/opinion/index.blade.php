@@ -22,7 +22,7 @@
             @endforeach
 
             <div class="container">
-        {{ $opinions -> links() }}</div>
+        {{ $opinions -> onEachSide(5)->links()  }}</div>
             
      
  
