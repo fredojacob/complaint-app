@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-@foreach($opinions as $opinion)
+
 
 <div class="container">
 
     <div class="row justify-content-center">
 
         <div class="col-md-8">
-
+        @foreach($opinions as $opinion)
             <div class="card">
                 <div class="card-header">{{ $opinion->mail}}</div>
 
@@ -19,12 +19,18 @@
                    <h2>  {{ $opinion->complaint}}</h2>
                 </div>
             </div>
-            
-        </div>
-      
-    </div>
-</div>
-<hr>
-@endforeach
+            @endforeach
 
+            <div class="container">
+        {{ $opinions -> links() }}</div>
+            
+     
+ 
+
+
+
+
+</div>
+
+</div>
 @endsection
